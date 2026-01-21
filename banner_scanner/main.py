@@ -14,6 +14,7 @@ from constants import (
     READ_TIMEOUT,
     SENTINEL,
     WORKER_COUNT,
+    VERSION,
 )
 
 # Project libraries
@@ -24,6 +25,7 @@ async def main():
     parser = argparse.ArgumentParser(
         prog="Banner Scanner", description="A utility for performing asynchronous banner grabbing"
     )
+    parser.add_argument("--version", action="version", version=f"Banner Scanner v{VERSION}")
     parser.add_argument("-i", "--input", required=True, type=Path, help="The input csv file with a ip and port column")
     parser.add_argument("-o", "--output", required=True, type=Path, help="The path to write the output csv file to")
     parser.add_argument("-b", "--banner", required=True, choices=BANNER_TYPES, type=str, help="The banner type")

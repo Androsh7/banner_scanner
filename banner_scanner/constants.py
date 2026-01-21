@@ -1,5 +1,7 @@
 """Constants"""
 
+VERSION = "0.1.0"
+
 # Default arguments
 MAX_IN_QUEUE = 5000
 MAX_OUT_QUEUE = 5000
