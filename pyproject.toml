@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "banner_scanner"
+version = "0.1.0"
+description = "Tool for banner grabbing and web searching"
+requires-python = ">=3.13"
+dependencies = [
+    "aiocsv",
+    "aiofiles",
+]
+
+[project.optional-dependencies]
+dev = [
+    "nuitka",
+    "pytest",
+    "ruff",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+select = [
+    "E", # Pycodestyle errors
+    "F", # Pyflakes
+    "I", # Isort
+    "PL", # Pylint
+    "UP", # Pyupgrade
+]
+
+[tool.pylint.format]
+max-line-length = 120
+
+[tool.setuptools]
+packages = ["banner_scanner"]
