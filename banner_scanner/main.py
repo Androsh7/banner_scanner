@@ -19,14 +19,6 @@ from constants import (
 # Project libraries
 from worker import Stats, csv_to_target_queue_worker, result_queue_to_csv_worker, scan_worker, status_worker
 
-MAX_IN_QUEUE = 5000
-MAX_OUT_QUEUE = 5000
-MAX_CONCURRENCY = 1000
-WORKER_COUNT = 200
-BANNER_TYPE = "ssh"
-CONNECTION_TIMEOUT = 1.0
-READ_TIMEOUT = 1.0
-
 
 async def main():
     parser = argparse.ArgumentParser(
